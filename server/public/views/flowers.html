@@ -1,1 +1,17 @@
 <h1>flowers view</h1>
+
+<section id="sortButtons">
+  <p>sort by</p>
+  <button type="button" name="price"></button>
+  <button type="button" name="class"></button>
+  <button type="button" name="color"></button>
+</section>
+
+<section id="flowersDisplay">
+
+  <div class="flowers" ng-repeat="flower in flowers">
+    <img ng-src="{{flower.image}}" />
+    <h4>{{flower.name}}</h4>
+  </div>
+
+</section>

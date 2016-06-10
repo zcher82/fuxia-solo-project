@@ -1,5 +1,7 @@
 var app = angular.module('myApp', ['ngRoute']);
 
+app.constant('moment', moment);
+
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/home', {

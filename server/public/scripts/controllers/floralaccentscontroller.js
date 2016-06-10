@@ -13,5 +13,4 @@ app.controller('FloralAccentsController', ['$scope', '$http', function($scope, $
       });
   }
 
-
-  
+}]);

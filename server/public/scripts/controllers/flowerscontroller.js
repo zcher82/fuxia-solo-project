@@ -12,3 +12,5 @@ app.controller('FlowersController', ['$scope', '$http', function($scope, $http) 
         scope.floralAccents = response.data;
       });
   }
+
+}]);

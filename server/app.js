@@ -6,7 +6,9 @@ var bodyParser = require('body-parser');
 
 
 // modules
-var customers = require('./routes/customers');
+var accounts = require('./routes/accounts');
+var accents = require('./routes/accents');
+var flowerdb = require('./routes/flowerdb');
 
 
 // middleware
@@ -15,10 +17,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // express routes
-app.use('/customers', customers);
+app.use('/accounts', accounts);
+app.use('/accents', accents);
+app.use('/flowerdb', flowerdb);
 
 // mongoose connection
-var databaseURI = 'mongodb://localhost:27017/mu';
+var databaseURI = 'mongodb://localhost:27017/fuxia';
 
 mongoose.connect(databaseURI);
 

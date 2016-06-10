@@ -1,4 +1,4 @@
-app.controller('AccountsController', ['$scope', '$http', function($scope, $http) {
+app.controller('AccountsController', ['$scope', '$http', 'moment', function($scope, $http, moment) {
   console.log('AccountsController running');
 
   $scope.customers = [];  //"container" for the returned customer objects, which we'll use to populate customerTable
@@ -31,7 +31,7 @@ app.controller('AccountsController', ['$scope', '$http', function($scope, $http)
   function getCustomers() {
     $http.get('/accounts').then(function(response) {
       response.data.forEach(function (customer) {
-        customer.eventDate = new Date(customer.eventDate);
+        customer.eventDate = moment.utc(customer.eventDate).format('MM-DD-YYYY'); 
       });
       console.log(response);
       $scope.customers = response.data;

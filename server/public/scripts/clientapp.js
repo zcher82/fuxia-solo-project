@@ -26,6 +26,10 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/gallery.html',
       controller: 'GalleryController'
     })
+    .when('/flowerdb', {
+      templateUrl: '/views/flowerdb.html',
+      controller: 'FlowerdbController'
+    })
     .otherwise({
       redirectTo: '/home'
     })

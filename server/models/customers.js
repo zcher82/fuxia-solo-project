@@ -8,6 +8,7 @@ var CustomerSchema = new Schema({
   phone: { type: Number, required: true },
   address: { type: String, required: true },
   event: { type: String, required: true },
+  eventDate: Date,
   comments: { type: String, required: true },
 });
 

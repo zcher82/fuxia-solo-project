@@ -1,0 +1,12 @@
+#customerTable th, td {
+  border: 2px solid black;
+}
+
+#flowerTable th, td {
+  border: 2px solid black;
+}
+
+#tableImage img{
+  width: 20px;
+  height: auto;
+}

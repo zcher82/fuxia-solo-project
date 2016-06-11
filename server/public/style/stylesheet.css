@@ -1,3 +1,7 @@
+#menu-bar {
+  background-color: pink;
+}
+
 #customerTable th, td {
   border: 2px solid black;
 }
@@ -6,7 +10,33 @@
   border: 2px solid black;
 }
 
-#tableImage img{
+.thumbDiv {
+  width: 21px;
+  height: 21px;
+}
+
+.dbThumb {
   width: 20px;
   height: auto;
+}
+
+.galleryImage {
+  width: 150px;
+  height: auto;
+  border: 1px solid pink;
+  border-radius: 75px;
+}
+
+.inline > *{
+  float:left;
+  width: 45%;
+}
+
+#tableImage{
+  width: 12%;
+}
+
+.addImage {
+  font-size: 7px;
+
 }

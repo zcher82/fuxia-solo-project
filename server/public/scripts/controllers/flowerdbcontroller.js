@@ -3,6 +3,8 @@ app.controller('FlowerdbController', ['$scope', '$http', function($scope, $http)
 
   $scope.flowers = [];
   $scope.currentFlower = {};
+  $scope.newImage = {};
+  $scope.displayedFlowerId = '';
 
   getFlowers();
 
@@ -27,8 +29,7 @@ app.controller('FlowerdbController', ['$scope', '$http', function($scope, $http)
         $scc.description = "";
         $scc.symbolism = "";
         $scc.colorMeaning = "";
-        $scc.image = "";
-        $scope.flowerForm.$setPristine();
+        // $scope.flowerForm.$setPristine();
       });
   };
 
@@ -38,6 +39,25 @@ app.controller('FlowerdbController', ['$scope', '$http', function($scope, $http)
       .then(function (response) {
         getFlowers();
 
+      });
+  };
+
+  $scope.imgShowInput = function (id) {
+    $scope.displayedFlowerId = id;
+  }
+
+
+  //adding new image to DB
+  $scope.addImage = function (id) {
+    var image = $scope.newImage;
+    $http.put('/flowerdb/' + id + '/images', image)
+      .then(function (response) {
+        console.log('PUT /images ', image);
+        getFlowers();
+
+        //clear input field
+        $scope.newImage.image = "";
+        // $scope.addImgForm.$setPristine();
       });
   };
 

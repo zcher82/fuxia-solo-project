@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var ImageSchema = require('./image').schema;
 
 
 var FlowerSchema = new Schema({
@@ -7,7 +8,7 @@ var FlowerSchema = new Schema({
   description: { type: String, required: true },
   symbolism: { type: String, required: true },
   colorMeaning: { type: String, required: true },
-  image: { type: String, required: true},
+  images: [ImageSchema],
 });
 
 var Flower = mongoose.model('Flower', FlowerSchema);

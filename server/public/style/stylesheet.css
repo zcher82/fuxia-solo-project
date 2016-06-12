@@ -49,8 +49,10 @@
 /*--------------------------------flowers view-------------------------------------*/
 
 .flowerImages {
-  text-align: justify;
-  line-height: 0;
+  position: relative;
+  width: 100%;
+  /*text-align: justify;
+  line-height: 0;*/
 }
 
 .flowersThumb {
@@ -58,6 +60,6 @@
   width: 250px;
   height: 250px;
   border: 2px solid pink;
-  border-radius: 125px;
-  margin: 10px;
+  border-radius: 40px;
+  margin: 30px;
 }

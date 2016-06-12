@@ -11,7 +11,7 @@ app.controller('FlowerdbController', ['$scope', '$http', function($scope, $http)
   function getFlowers() {
     $http.get('/flowerdb')
       .then(function (response) {
-        $scope.flowers = response.data;    //$scoped 'movies' here is the array...the returned data
+        $scope.flowers = response.data;
         console.log('GET /flowers ', response.data);
 
       });

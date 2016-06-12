@@ -51,12 +51,14 @@
           </form>
         </div>
         <div class="thumbDiv" ng-repeat="image in flower.images">
-          <img class="dbThumb" ng-src="style/content/img/thumb/{{image.image}}.png" />
+          <img class="dbThumb" ng-src="style/content/img/gallery/{{image.image}}.png" />
         </div>
-
-        <!--<img class="dbThumb" ng-src="style/content/img/thumb/{{flower.image}}.png" />-->
       </td>
 
     </tr>
   </table>
 </section>
+
+<div  ng-repeat="image in flower.images">
+  <img  ng-src="style/content/img/gallery/{{image.image}}.png" />
+</div>

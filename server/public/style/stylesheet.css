@@ -2,15 +2,20 @@
   background-color: pink;
 }
 
+/*-----------------flowersdb------------------*/
+
 #customerTable th, td {
   border: 2px solid black;
+  border-collapse: collapse;
 }
 
 #flowerTable th, td {
   border: 2px solid black;
+  border-collapse: collapse;
 }
 
 .thumbDiv {
+  clear: both;
   width: 21px;
   height: 21px;
 }
@@ -27,16 +32,32 @@
   border-radius: 75px;
 }
 
-.inline > *{
+.inline > * {
   float:left;
   width: 45%;
 }
 
-#tableImage{
+#tableImage {
   width: 12%;
 }
 
 .addImage {
   font-size: 7px;
+}
 
+
+/*--------------------------------flowers view-------------------------------------*/
+
+.flowerImages {
+  text-align: justify;
+  line-height: 0;
+}
+
+.flowersThumb {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  border: 2px solid pink;
+  border-radius: 125px;
+  margin: 10px;
 }

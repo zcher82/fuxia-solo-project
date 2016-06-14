@@ -1,15 +1,25 @@
 app.controller('FloralAccentsController', ['$scope', '$http', function($scope, $http) {
   console.log('FloralAccentsController running');
 
-  $scope.floralAccents = [];
+  $scope.accents = [];
+  $scope.greens = [];
 
-  getFloralAccents();
+  getAccents();
+  getGreens();
 
-  function getFloralAccents() {
+  function getAccents() {
     $http.get('/accents')
       .then(function(response){
         console.log(response);
-        scope.floralAccents = response.data;
+        $scope.accents = response.data;
+      });
+  }
+
+  function getGreens() {
+    $http.get('/accents/green')
+      .then(function(response){
+        console.log(response);
+        $scope.greens = response.data;
       });
   }
 

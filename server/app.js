@@ -10,6 +10,7 @@ var moment = require('moment');
 var accounts = require('./routes/accounts');
 var accents = require('./routes/accents');
 var flowerdb = require('./routes/flowerdb');
+var galleryinput = require('./routes/galleryinput');
 
 
 // middleware
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use('/accounts', accounts);
 app.use('/accents', accents);
 app.use('/flowerdb', flowerdb);
+app.use('/galleryinput', galleryinput);
 
 // mongoose connection
 var databaseURI = 'mongodb://localhost:27017/fuxia';

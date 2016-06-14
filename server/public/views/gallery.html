@@ -1,7 +1,24 @@
 <h1>gallery</h1>
 
 
+<section id="gallerySlider">
 
-<img class="galleryImage" src="style/content/img/gallery/callalily3.png" alt="calla lily" />
-<img class="galleryImage" src="style/content/img/gallery/callalily2.png" alt="calla lily" />
-<img class="galleryImage" src="style/content/img/gallery/callalily1.png" alt="calla lily" />
+
+    <div class="container slider">
+        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()"
+          ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+
+        <img class="arrow prev" src="./style/content/slider/leftwhite.png"
+          ng-click="showPrev()"></img>
+        <img class="arrow next" src="./style/content/slider/rightwhite.png"
+          ng-click="showNext()"></img>
+
+        <ul class="nav">
+            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}"
+                  ng-click="showPhoto($index);" />
+            </li>
+        </ul>
+    </div>
+
+</section>

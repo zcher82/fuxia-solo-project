@@ -1,0 +1,101 @@
+<h1>gallery input</h1>
+
+<section id=gallery>
+  <section id="submitGalleryImage">
+    <p>Add arrangement images:</p>
+    <form id="galleryAddImgForm" name="galleryAddImgForm">
+        <input type="text" name="image" placeholder="Arrangement image" ng-model="newArrangement.image" />
+
+        <input type="text" name="description" placeholder="Description"
+          ng-model="newArrangement.description"  />
+
+        <button class="addArrangement" ng-click="addArrangement()">submit</button>
+    </form>
+  </section>
+
+  <section id="galleryList">
+    <h3>Arrangements in database</h3>
+    <div class="eachArrangement" ng-repeat="arrangement in arrangements">
+      <img class="galleryInputThumb" ng-src="style/content/slider/{{arrangement.image}}.jpg" />
+      {{arrangement.description}}
+    </div>
+  </section>
+</section>
+
+<br>
+<br>
+<br>
+
+<section id=accents>
+
+  <section id="submitAccent">
+    <p>Add floral accents:</p>
+    <form id="accentAddImgForm" name="accentAddImgForm">
+      <input type="text" name="name" placeholder="name"
+        ng-model="newAccent.name"  />
+
+      <input type="text" name="image" placeholder="Accent image" ng-model="newAccent.image" />
+
+      <button class="addAccent" ng-click="addAccent()">submit</button>
+    </form>
+  </section>
+
+  <section id="accentList">
+    <h3>Floral Accents in database</h3>
+    <table id="accentTable">
+      <thead>
+        <tr>
+          <th>Delete</th>
+          <th class="name">Name</th>
+          <th class="image">Image</th>
+        </tr>
+      </thead>
+      <tr ng-repeat="accent in accents">
+        <td><button id="deleteAccentButton" type="button" name="deleteAccent"
+          ng-click="deleteAccent(accent._id)">delete</button></td>
+        <td>{{accent.name}}</td>
+        <td><img class="inputAccentThumb" ng-src="style/content/img/accents/{{accent.image}}.png" /></td>
+      </tr>
+    </table>
+  </section>
+
+</section>
+
+<br>
+<br>
+<br>
+
+<section id=greens>
+
+  <section id="submitGreen">
+    <p>Add greens/leaves/branches:</p>
+    <form id="greenAddImgForm" name="greenAddImgForm">
+      <input type="text" name="name" placeholder="Name"
+        ng-model="newGreen.name"  />
+
+      <input type="text" name="image" placeholder="Green image" ng-model="newGreen.image" />
+
+      <button class="addAccent" ng-click="addGreen()">submit</button>
+    </form>
+  </section>
+
+  <section id="greenList">
+    <h3>Greens/Leave/Branches in database</h3>
+    <table id="greenTable">
+      <thead>
+        <tr>
+          <th>Delete</th>
+          <th class="name">Name</th>
+          <th class="image">Image</th>
+        </tr>
+      </thead>
+      <tr ng-repeat="green in greens">
+        <td><button id="deleteGreenButton" type="button" name="deleteGreen"
+          ng-click="deleteGreen(green._id)">delete</button></td>
+        <td>{{green.name}}</td>
+        <td><img class="inputGreenThumb" ng-src="style/content/img/greens/{{green.image}}.png" /></td>
+      </tr>
+    </table>
+  </section>
+
+</section>

@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngTouch']);
 
 app.constant('moment', moment);
 
@@ -31,6 +31,10 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/flowerdb', {
       templateUrl: '/views/flowerdb.html',
       controller: 'FlowerdbController'
+    })
+    .when('/galleryinput', {
+      templateUrl: '/views/galleryinput.html',
+      controller: 'GalleryInputController'
     })
     .otherwise({
       redirectTo: '/home'

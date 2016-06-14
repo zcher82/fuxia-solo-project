@@ -1,7 +1,10 @@
+<div class="inputHtml">
+
 <h1>gallery input</h1>
 
 <section id=gallery>
   <section id="submitGalleryImage">
+    <h3>Arrangements in database</h3>
     <p>Add arrangement images:</p>
     <form id="galleryAddImgForm" name="galleryAddImgForm">
         <input type="text" name="image" placeholder="Arrangement image" ng-model="newArrangement.image" />
@@ -14,9 +17,9 @@
   </section>
 
   <section id="galleryList">
-    <h3>Arrangements in database</h3>
+
     <div class="eachArrangement" ng-repeat="arrangement in arrangements">
-      <img class="galleryInputThumb" ng-src="style/content/slider/{{arrangement.image}}.jpg" />
+      <img class="galleryInputThumb" ng-src="style/content/slider/{{arrangement.image}}.png" />
       {{arrangement.description}}
     </div>
   </section>
@@ -29,6 +32,7 @@
 <section id=accents>
 
   <section id="submitAccent">
+    <h3>Floral Accents in database</h3>
     <p>Add floral accents:</p>
     <form id="accentAddImgForm" name="accentAddImgForm">
       <input type="text" name="name" placeholder="name"
@@ -41,7 +45,7 @@
   </section>
 
   <section id="accentList">
-    <h3>Floral Accents in database</h3>
+
     <table id="accentTable">
       <thead>
         <tr>
@@ -68,6 +72,7 @@
 <section id=greens>
 
   <section id="submitGreen">
+    <h3>Greens/Leave/Branches in database</h3>
     <p>Add greens/leaves/branches:</p>
     <form id="greenAddImgForm" name="greenAddImgForm">
       <input type="text" name="name" placeholder="Name"
@@ -80,7 +85,7 @@
   </section>
 
   <section id="greenList">
-    <h3>Greens/Leave/Branches in database</h3>
+
     <table id="greenTable">
       <thead>
         <tr>
@@ -99,3 +104,4 @@
   </section>
 
 </section>
+</div>

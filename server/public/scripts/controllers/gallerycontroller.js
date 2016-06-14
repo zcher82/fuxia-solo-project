@@ -3,9 +3,11 @@ app.controller('GalleryController', ['$scope', '$http', function($scope, $http) 
 
   $scope.arrowPrevious = "arrowPrevious";
   $scope.arrowNext = "arrowNext";
+  $scope.arrangements = [];
+  getArrangements();
+//$scope.photos = $scope.arrangements
 
-
-  // Set of Photos
+/*  // Set of Photos
   $scope.photos = [
       {src: 'http://farm9.staticflickr.com/8042/7918423710_e6dd168d7c_b.jpg', desc: 'Image 01'},
       {src: 'http://farm9.staticflickr.com/8449/7918424278_4835c85e7a_b.jpg', desc: 'Image 02'},
@@ -13,7 +15,16 @@ app.controller('GalleryController', ['$scope', '$http', function($scope, $http) 
       {src: 'http://farm9.staticflickr.com/8179/7918424842_c79f7e345c_b.jpg', desc: 'Image 04'},
       {src: 'http://farm9.staticflickr.com/8315/7918425138_b739f0df53_b.jpg', desc: 'Image 05'},
       {src: 'http://farm9.staticflickr.com/8461/7918425364_fe6753aa75_b.jpg', desc: 'Image 06'}
-  ];
+  ];*/
+
+
+  function getArrangements() {
+    $http.get('/galleryinput')
+      .then(function (response) {
+        $scope.arrangements = response.data;
+        console.log($scope.arrangements);
+      });
+  }
 
   // initial image index
   $scope._Index = 0;
@@ -25,16 +36,16 @@ app.controller('GalleryController', ['$scope', '$http', function($scope, $http) 
 
   // show prev image
   $scope.showPrev = function () {
-      $scope._Index = ($scope._Index > 0) ? --$scope._Index : $scope.photos.length - 1;
+      $scope._Index = ($scope._Index > 0) ? --$scope._Index : $scope.arrangements.length - 1;
   };
 
   // show next image
   $scope.showNext = function () {
-      $scope._Index = ($scope._Index < $scope.photos.length - 1) ? ++$scope._Index : 0;
+      $scope._Index = ($scope._Index < $scope.arrangements.length - 1) ? ++$scope._Index : 0;
   };
 
   // show a certain image
-  $scope.showPhoto = function (index) {
+  $scope.showArrangement = function (index) {
       $scope._Index = index;
   };
 

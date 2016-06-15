@@ -28,6 +28,18 @@ router.get('/', function (req, res) {
   });
 });
 
+//DELETE arrangment
+router.delete('/:id', function (req, res) {
+  console.log(req.params.id);
+  Arrangement.findByIdAndRemove(req.params.id, function (err) {
+    if (err) {
+      res.sendStatus(500);
+      return;
+    }
+      res.sendStatus(204);
+  });
+});
+
 
 //POST new floral accent
 router.post('/accent', function (req, res) {
@@ -43,6 +55,19 @@ router.post('/accent', function (req, res) {
   });
 });
 
+//DELETE floral accent
+router.delete('/accent/:id', function (req, res) {
+  console.log(req.params.id);
+  Accent.findByIdAndRemove(req.params.id, function (err) {
+    if (err) {
+      res.sendStatus(500);
+      return;
+    }
+      res.sendStatus(204);
+  });
+});
+
+
 //POST new greens
 router.post('/green', function (req, res) {
   var greens = new Green(req.body);
@@ -53,6 +78,17 @@ router.post('/green', function (req, res) {
     }
 
     res.sendStatus(201);
+  });
+});
+
+router.delete('/green/:id', function (req, res) {
+  console.log(req.params.id);
+  Green.findByIdAndRemove(req.params.id, function (err) {
+    if (err) {
+      res.sendStatus(500);
+      return;
+    }
+      res.sendStatus(204);
   });
 });
 

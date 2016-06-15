@@ -4,11 +4,13 @@
 
 
   <section id="customerSubmission">
-    <h1 class="h1customerSubmission">Create new customer</h1>
+    <h2 class="h2customerSubmission">Create new customer</h2>
     <form id="customerForm" name="customerForm">
       <input type="text" id="firstName" name="firstName" placeholder="First Name" ng-model="currentCustomer.firstName" />
 
       <input type="text" id="lastName" name="lastName" placeholder="Last Name" ng-model="currentCustomer.lastName" />
+
+      <input type="tel" id="email" name="email" placeholder="Email" ng-model="currentCustomer.email" />
 
       <input type="tel" id="phone" name="phone" placeholder="phone" ng-model="currentCustomer.phone" />
 
@@ -27,14 +29,15 @@
     <table id="customerTable" datatable="ng" dt-options="dtOptions">
       <thead>
         <tr>
-          <th>delete</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Phone</th>
-          <th>Address</th>
-          <th>Event</th>
-          <th>Event Date</th>
-          <th>Comments</th>
+          <th class="aDelete">delete</th>
+          <th class="aFName">First Name</th>
+          <th class="aLName">Last Name</th>
+          <th class="aEmail">Email</th>
+          <th class="aPhone">Phone</th>
+          <th class="aAddress">Address</th>
+          <th class="aEvent">Event</th>
+          <th class="AEventDate">Event Date</th>
+          <th class="aComments">Comments</th>
         </tr>
       </thead>
       <tr ng-repeat="customer in customers">
@@ -42,6 +45,7 @@
           ng-click="deleteCustomer(customer._id)">delete</button></td>
         <td>{{customer.firstName}}</td>
         <td>{{customer.lastName}}</td>
+        <td><a href="mailto:{{customer.email}}">{{customer.email}}</a></td>
         <td>{{customer.phone}}</td>
         <td>{{customer.address}}</td>
         <td>{{customer.event}}</td>

@@ -1,10 +1,14 @@
-app.controller('AccountsController', ['$scope', '$http', 'moment', function($scope, $http, moment) {
+app.controller('AccountsController', ['$scope', '$http', 'moment', 'DTOptionsBuilder', function($scope, $http, moment, DTOptionsBuilder) {
   console.log('AccountsController running');
 
   $scope.customers = [];  //"container" for the returned customer objects, which we'll use to populate customerTable
   $scope.currentCustomer = {};  //"container" for each new customer that is created
 
   getCustomers();
+
+  $scope.dtOptions = DTOptionsBuilder.newOptions()
+        .withDisplayLength(10)
+        .withOption('bLengthChange', false);
 
   //function to create a new customer once data has been entered and "create" button is clicked
   $scope.submitCurrentCustomer = function() {
@@ -31,7 +35,7 @@ app.controller('AccountsController', ['$scope', '$http', 'moment', function($sco
   function getCustomers() {
     $http.get('/accounts').then(function(response) {
       response.data.forEach(function (customer) {
-        customer.eventDate = moment.utc(customer.eventDate).format('MM-DD-YYYY'); 
+        customer.eventDate = moment.utc(customer.eventDate).format('MM-DD-YYYY');
       });
       console.log(response);
       $scope.customers = response.data;

@@ -4,18 +4,32 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 200px;
+  height: 140px;
 }
 
 #menu-bar h1 {
   font-family:
 }
 
-.inputHtml, .galleryHtml {
-  padding: 215px 0 80px 0;
+.inputHtml, .galleryHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
+  .colorHtml, .accountsHtml {
+  padding: 120px 0 80px 0;
 }
 
+.homepage {
+  text-align: center;
+}
 
+.homeImage {
+  position: fixed;
+  top: 150px;
+  left: 33%;
+  width: 30%;
+}
+
+footer {
+  background-color: pink;
+}
 /*-----------------flowersdb------------------*/
 
 #customerTable {
@@ -247,12 +261,6 @@
     -moz-transition:1s linear all;
     -o-transition:1s linear all;
     transition:1s linear all;
-
-/*    -webkit-transform: rotateX(50deg) rotateY(30deg);
-    -moz-transform: rotateX(50deg) rotateY(30deg);
-    -ms-transform: rotateX(50deg) rotateY(30deg);
-    -o-transform: rotateX(50deg) rotateY(30deg);
-    /*transform: rotateX(50deg) rotateY(30deg);*/*/
 
     -webkit-transform-origin: right top 0;
     -moz-transform-origin: right top 0;

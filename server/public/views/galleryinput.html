@@ -7,7 +7,8 @@
     <h3>Arrangements in database</h3>
     <p>Add arrangement images:</p>
     <form id="galleryAddImgForm" name="galleryAddImgForm">
-        <input type="text" name="image" placeholder="Arrangement image" ng-model="newArrangement.image" />
+        <input type="text" name="image" placeholder="Arrangement image"
+        ng-model="newArrangement.image" />
 
         <input type="text" name="description" placeholder="Description"
           ng-model="newArrangement.description"  />
@@ -20,7 +21,8 @@
 
     <div class="eachArrangement" ng-repeat="arrangement in arrangements">
       <img class="galleryInputThumb" ng-src="style/content/slider/{{arrangement.image}}.png" />
-      {{arrangement.description}}
+      <p class="arrangementComment">{{arrangement.description}}</p>
+      <button type="button" name="delete" ng-click="deleteArrangement(arrangement._id)">delete</button>
     </div>
   </section>
 </section>
@@ -46,15 +48,15 @@
 
   <section id="accentList">
 
-    <table id="accentTable">
+    <table id="accentTable" st-table="accentsGhost" st-safe-src="accents">
       <thead>
         <tr>
           <th>Delete</th>
-          <th class="name">Name</th>
+          <th st-sort="name" class="name">Name <button>sort</button></th>
           <th class="image">Image</th>
         </tr>
       </thead>
-      <tr ng-repeat="accent in accents">
+      <tr ng-repeat="accent in accentsGhost">
         <td><button id="deleteAccentButton" type="button" name="deleteAccent"
           ng-click="deleteAccent(accent._id)">delete</button></td>
         <td>{{accent.name}}</td>
@@ -86,15 +88,15 @@
 
   <section id="greenList">
 
-    <table id="greenTable">
+    <table id="greenTable" st-table="greensGhost" st-safe-src="greens">
       <thead>
         <tr>
           <th>Delete</th>
-          <th class="name">Name</th>
+          <th st-sort="name" class="name">Name <button>sort</button></th>
           <th class="image">Image</th>
         </tr>
       </thead>
-      <tr ng-repeat="green in greens">
+      <tr ng-repeat="green in greensGhost">
         <td><button id="deleteGreenButton" type="button" name="deleteGreen"
           ng-click="deleteGreen(green._id)">delete</button></td>
         <td>{{green.name}}</td>

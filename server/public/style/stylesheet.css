@@ -1,6 +1,6 @@
 #menu-bar {
   text-align: center;
-  background-color: #f7ebf3;
+  background-color: #eb75ac;
   position: fixed;
   top: 0;
   width: 100%;
@@ -9,6 +9,37 @@
 
 #menu-bar h1 {
   font-family:
+}
+
+#menu-bar .public {
+  float: left;
+  margin-left: 10px;
+}
+
+#menu-bar .admin {
+  float: right;
+  margin-right: 10px;
+}
+
+.public a {
+  color: white;
+  text-decoration:none !important;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.public a:hover {
+  color: yellow;
+}
+
+.admin a{
+  color: white;
+  text-decoration:none !important;
+  margin: 0 2px 0 2px;
+}
+
+.admin a:hover {
+  color:yellow;
 }
 
 .inputHtml, .galleryHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
@@ -31,33 +62,57 @@ footer {
   background-color: pink;
 }
 /*-----------------flowersdb------------------*/
-
-#customerTable {
-  border-collapse: collapse;
+.flowerdbHtml {
+  background-image: url("./content/header-footer/vintageblueflowers.png");
 }
 
-#customerTable th, td {
-  border: 1px solid black;
+#Flower {
+  background-color: white;
+  opacity: .90;
+}
+
+#flowerList {
+  background-color: white;
+  opacity: .98;
+}
+
+.flowerdbHtml h1 {
+  text-align: center;
 }
 
 #flowerTable {
+  margin-top: 20px;
   border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 7px;
 }
 
-#flowerTable th, td {
-  border: 1px solid black;
+#flowerTable th {
+  height: 20px;
+  background-color: #EB75AC;
+  border: 1px solid white;
+}
+
+#flowerTable tr:nth-child(odd) {
+  background: #FAD9E9;
+}
+
+#flowerTable td {
+  /*border: 0.5px solid #eb75ac;*/
+  border: none;
+  padding: 0 8px 0 8px;
+
 }
 
 .thumbDiv {
   clear: both;
-  width: 45%;
-  margin: 0;
-
+  column-count: 2;
+  column-gap: 0.5em;
 }
 
 .dbThumb {
-  clear: both;
-  display: inline-block;
+  border: 0.5px solid grey;
+  display: inline;
   width: 100%;
   height: auto;
 
@@ -83,8 +138,64 @@ footer {
   font-size: 7px;
 }
 
+.fdbHeader1 {
+  width: 100px;
+}
+
+.fdbImageHeader {
+  width: 300px;
+}
+
+.fdbDeleteHeader {
+  width: 5px;
+  text-align: center;
+}
+
+.fdbFlowerHeader {
+  width: 25px;
+}
+
+/* ************************* Accounts view *************************/
+.accountsHtml h1 {
+  text-align: center;
+}
+
+#customerTable {
+  border-collapse: collapse;
+}
+
+#customerTable th, td {
+  border: 1px solid black;
+}
+
+#customerTable .aDelete {
+  width: 50px;
+}
+
+#customerTable .aFName, .aLName, .aEmail, .aPhone,
+  .aAddress {
+  width: 100px;
+}
+
+#customerTable .aEvent, .aEventDate {
+  width: 50px;
+}
+
+#customerTable .aComments {
+  width: 175px;
+}
+
 
 /*--------------------------------flowers view-------------------------------------*/
+.flowersHtml {
+  background-color: black;
+}
+
+.flowersHtml h1 {
+  text-align: center;
+  color: white;
+}
+
 
 .flowerImages {
   position: relative;
@@ -104,6 +215,15 @@ footer {
 
 
 /* *************************** ACCENTS page *********************** */
+.accentsHtml {
+  background-color: black;
+}
+
+
+.accentsHtml {
+  text-align: center;
+  color: white;
+}
 
 .accentImage, .greenImage {
   display: inline-block;
@@ -115,14 +235,37 @@ footer {
 }
 
 /* ************************ INPUT page ************************** */
+.inputHtml {
+/*  background-image: url("./content/header-footer/vintageblueflowers.png");*/
+}
+
+
 #gallery, #accents, #greens {
   border: 2px solid black;
   padding: 10px;
 }
 
+#galleryList {
+  column-count: 2;
+}
+
+.inputHtml h1 {
+  text-align: center;
+}
+
 .galleryInputThumb {
   width: 100px;
   height: auto;
+}
+
+.eachArrangement {
+  width: 475px;
+}
+
+.eachArrangement
+
+.arrangementComment {
+  display: inline;
 }
 
 #accentTable {
@@ -133,11 +276,7 @@ footer {
   border: 1px solid black;
 }
 
-#accentTable .name {
-  width: 300px;
-}
-
-#accentTable .image {
+#accentTable .name, .image {
   width: 300px;
 }
 
@@ -149,11 +288,7 @@ footer {
   border: 1px solid black;
 }
 
-#greenTable .name {
-  width: 300px;
-}
-
-#greenTable .image {
+#greenTable .name, .image {
   width: 300px;
 }
 
@@ -165,6 +300,21 @@ footer {
 .inputGreenThumb {
   width: 50px;
   height: auto;
+}
+
+/* ********************* GALLERY PAGE *******************/
+.galleryHtml {
+  background-color: black;
+}
+
+.galleryHtml h1 {
+  text-align: center;
+  color: white;
+}
+
+/* ************************ COLOR MEANINGS PAGE ****************/
+.colorHtml h1 {
+  text-align: center;
 }
 
 /*--------------------------------- SLIDER -------------------------------------------*/

@@ -21,6 +21,7 @@ app.controller('AccountsController', ['$scope', '$http', 'moment', 'DTOptionsBui
         var $scc = $scope.currentCustomer;
         $scc.firstName = "";
         $scc.lastName = "";
+        $scc.email = "";
         $scc.phone = "";
         $scc.address = "";
         $scc.event = "";

@@ -38,6 +38,14 @@ app.controller('GalleryInputController', ['$scope', '$http', function($scope, $h
       });
   }
 
+  $scope.deleteArrangement = function (id) {
+    console.log(id);
+    $http.delete('/galleryinput/' + id)
+      .then(function (response) {
+        getArrangements();
+
+      });
+  };
 
 //***************** Accents functions ********************
 
@@ -64,6 +72,15 @@ app.controller('GalleryInputController', ['$scope', '$http', function($scope, $h
       });
   }
 
+  $scope.deleteAccent = function (id) {
+    console.log(id);
+    $http.delete('/galleryinput/accent/' + id)
+      .then(function (response) {
+        getAccents();
+
+      });
+  };
+
 
 //******************* Greens functions ***********************
 
@@ -88,5 +105,14 @@ app.controller('GalleryInputController', ['$scope', '$http', function($scope, $h
         console.log($scope.greens);
       });
   }
+
+  $scope.deleteGreen = function (id) {
+    console.log(id);
+    $http.delete('/galleryinput/green/' + id)
+      .then(function (response) {
+        getGreens();
+
+      });
+  };
 
 }]);

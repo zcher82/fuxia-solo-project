@@ -6,8 +6,8 @@ var ImageSchema = require('./image').schema;
 var FlowerSchema = new Schema({
   name: { type: String, required: true},
   description: { type: String, required: true },
-  symbolism: { type: String, required: true },
-  colorMeaning: { type: String, required: true },
+  symbolism: { type: String, required: false },
+  colorMeaning: { type: String, required: false },
   images: [ImageSchema],
 });
 

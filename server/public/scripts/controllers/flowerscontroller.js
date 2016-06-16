@@ -1,4 +1,4 @@
-app.controller('FlowersController', ['$scope', '$http', function($scope, $http) {
+app.controller('FlowersController', ['$scope', '$http', '$modal', function($scope, $http, $modal) {
   console.log('FlowersController running');
 
   $scope.flowers = [];
@@ -29,11 +29,11 @@ app.controller('FlowersController', ['$scope', '$http', function($scope, $http) 
       });
   }
 
-  //need function to grab all greens
-
-  //need function to grab all accents
-
-  //need to build function that displays info and images for each flower once sample image is clicked on. same for accents and greens
-
+  $scope.displayFlowerModal = function() {
+    var modalInstance = $modal.open({
+      templateUrl: '../views/modalView.html',
+      controller: 'ModalCtrl'
+    });
+  };
 
 }]);

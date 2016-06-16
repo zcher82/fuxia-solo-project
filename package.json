@@ -12,10 +12,12 @@
   "dependencies": {
     "angular": "^1.5.6",
     "angular-animate": "^1.5.6",
+    "angular-bootstrap": "^0.12.2",
     "angular-route": "^1.5.6",
     "angular-smart-table": "^2.1.8",
     "angular-touch": "^1.5.6",
     "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "gsap": "^1.18.5",
     "jquery": "^2.2.4",

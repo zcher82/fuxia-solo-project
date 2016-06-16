@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'datatables', 'smart-table']);
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'datatables', 'smart-table', 'ui.bootstrap']);
 
 app.constant('moment', moment);
 

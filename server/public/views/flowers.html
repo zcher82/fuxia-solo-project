@@ -13,8 +13,38 @@
 <section id="flowersDisplay">
   <div class="flowerImages">
     <img ng-repeat="sample in samples" class="flowersThumb"
-    ng-src="style/content/img/flowers/{{sample.image}}.png" />
+      ng-src="style/content/img/flowers/{{sample.image}}.png"
+      ng-click="displayFlowerModal()" />
   </div>
 </section>
 
 </div>
+
+
+<!--
+
+<div
+  bn-modals
+  ng-show="subview"
+  class="m-modals"
+  ng-switch="subview">
+
+  <div
+      ng-switch-when="alert"
+      ng-controller="AlertModalController"
+      class="modal">
+
+      <p>
+          {{ message }}
+      </p>
+
+      <p>
+          <a ng-click="close()">Ok, I got it!</a>
+      </p>
+
+      <p>
+          <a ng-click="jumpToConfirm()" class="jump">Jump over to the confirm modal</a>
+      </p>
+
+  </div>
+</div>-->

@@ -220,7 +220,6 @@ footer {
   background-color: black;
 }
 
-
 .accentsHtml {
   text-align: center;
   color: white;
@@ -239,7 +238,6 @@ footer {
 .inputHtml {
 /*  background-image: url("./content/header-footer/vintageblueflowers.png");*/
 }
-
 
 #gallery, #accents, #greens {
   border: 2px solid black;
@@ -262,8 +260,6 @@ footer {
 .eachArrangement {
   width: 475px;
 }
-
-.eachArrangement
 
 .arrangementComment {
   display: inline;
@@ -319,7 +315,6 @@ footer {
 }
 
 /*--------------------------------- SLIDER -------------------------------------------*/
-
 .arrow {
     cursor: pointer;
     display: block;
@@ -332,11 +327,13 @@ footer {
     z-index: 5;
 }
 .arrow.prev {
+    background-image: url("../images/prev.png");
     left: 20px;
     opacity: 0.2;
     transition: all 0.2s linear 0s;
 }
 .arrow.next {
+    background-image: url("../images/next.png");
     opacity: 0.2;
     right: 20px;
     transition: all 0.2s linear 0s;
@@ -361,7 +358,6 @@ footer {
     width: 100%;
     z-index: 5;
 }
-
 .nav li {
     border: 1px solid #AAAAAA;
     border-radius: 5px;
@@ -373,7 +369,7 @@ footer {
     width: 50px;
 }
 .nav li.active {
-    border: 3px solid #FFFFFF;
+    border: 5px solid #FFFFFF;
 }
 .nav li img {
     width: 100%;
@@ -386,7 +382,6 @@ footer {
     margin: 20px auto;
     position: relative;
     width: 745px;
-    z-index: 2;
 
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
@@ -405,7 +400,6 @@ footer {
     top: 0;
     left: 0;
 }
-
 .slide.ng-hide-add {
     opacity:1;
 

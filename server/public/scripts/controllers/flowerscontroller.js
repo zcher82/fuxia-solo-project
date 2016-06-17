@@ -32,8 +32,18 @@ app.controller('FlowersController', ['$scope', '$http', '$modal', function($scop
   $scope.displayFlowerModal = function() {
     var modalInstance = $modal.open({
       templateUrl: '../views/modalView.html',
-      controller: 'ModalCtrl'
+      controller: 'ModalCtrl',
+      resolve: {
+        data: function() {
+          return $scope.flowers;
+        }
+        /*firstName: function() {
+          return "zeng";
+        },
+        lastName: function() {
+          return "her";
+        }*/
+      }
     });
   };
-
 }]);

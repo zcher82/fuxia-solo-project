@@ -3,10 +3,12 @@
 <h1>floral accents view</h1>
 
 <section id="accentsDisplay">
-  <h3>Accent Flowers</h3>
+
   <div class="accents">
+    <h3>Accent Flowers</h3>
     <img class="accentImage" ng-repeat="accent in accents"
-    ng-src="style/content/img/accents/{{accent.image}}.png" />
+      ng-src="style/content/img/accents/{{accent.image}}.png"
+      ng-click="displayAccentsModal()" />
     <h4>{{accent.name}}</h4>
   </div>
 
@@ -17,7 +19,8 @@
   <div class="greens">
     <h3>Greens/Leave/Branches</h3>
     <img class="greenImage" ng-repeat="green in greens"
-    ng-src="style/content/img/greens/{{green.image}}.png" />
+      ng-src="style/content/img/greens/{{green.image}}.png"
+      ng-click="displayAccentsModal()" />
     <h4>{{green.name}}</h4>
   </div>
 

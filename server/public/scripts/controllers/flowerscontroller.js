@@ -39,7 +39,7 @@ app.controller('FlowersController', ['$scope', '$http', '$modal', function($scop
       }
     });
     var modalInstance = $modal.open({
-      templateUrl: '../views/flowersModalView.html',
+      templateUrl: '../views/templates/flowersModalView.html',
       controller: 'ModalCtrl',
       resolve: {
         correctFlower: function() {

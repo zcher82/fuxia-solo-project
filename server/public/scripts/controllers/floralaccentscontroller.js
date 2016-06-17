@@ -10,7 +10,7 @@ app.controller('FloralAccentsController', ['$scope', '$http', function($scope, $
   function getAccents() {
     $http.get('/accents')
       .then(function(response){
-        console.log(response);
+        console.log('my', response);
         $scope.accents = response.data;
       });
   }

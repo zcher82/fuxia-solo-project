@@ -44,7 +44,11 @@
 }
 
 .inputHtml, .galleryHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
+<<<<<<< HEAD
  .colorHtml, .accountsHtml {
+=======
+  .colorHtml, .accountsHtml {
+>>>>>>> 95a4aef38f0da321d70d3306e831b35ce8fb8234
   padding: 120px 0 80px 0;
 }
 
@@ -310,12 +314,20 @@ footer {
 }
 
 /* ************************ COLOR MEANINGS PAGE ****************/
+<<<<<<< HEAD
 /*.colorHtml h1 {
   text-align: center;
 }*/
 
 /*--------------------------------- SLIDER -------------------------------------------*/
 
+=======
+.colorHtml h1 {
+  text-align: center;
+}
+
+/*--------------------------------- SLIDER -------------------------------------------*/
+>>>>>>> 95a4aef38f0da321d70d3306e831b35ce8fb8234
 .arrow {
     cursor: pointer;
     display: block;
@@ -328,11 +340,19 @@ footer {
     z-index: 5;
 }
 .arrow.prev {
+<<<<<<< HEAD
+=======
+    background-image: url("../images/prev.png");
+>>>>>>> 95a4aef38f0da321d70d3306e831b35ce8fb8234
     left: 20px;
     opacity: 0.2;
     transition: all 0.2s linear 0s;
 }
 .arrow.next {
+<<<<<<< HEAD
+=======
+    background-image: url("../images/next.png");
+>>>>>>> 95a4aef38f0da321d70d3306e831b35ce8fb8234
     opacity: 0.2;
     right: 20px;
     transition: all 0.2s linear 0s;
@@ -374,12 +394,17 @@ footer {
     width: 100%;
 }
 
+<<<<<<< HEAD
 /*.slider {
+=======
+.slider {
+>>>>>>> 95a4aef38f0da321d70d3306e831b35ce8fb8234
     border: 15px solid #FFFFFF;
     border-radius: 5px;
     height: 530px;
     margin: 20px auto;
     position: relative;
+<<<<<<< HEAD
     width: 745px;*/
 
 .slider {
@@ -390,6 +415,9 @@ footer {
     position: relative;
     width: 775px;
     padding: 0px;
+=======
+    width: 745px;
+>>>>>>> 95a4aef38f0da321d70d3306e831b35ce8fb8234
 
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;

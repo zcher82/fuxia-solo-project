@@ -26,6 +26,7 @@ app.use('/flowerdb', flowerdb);
 app.use('/galleryinput', galleryinput);
 
 // mongoose connection
+<<<<<<< HEAD
 var databaseURI = '';
   if (process.env.MONGODB_URI != undefined) {
     databaseURI = process.env.MONGODB_URI;
@@ -35,6 +36,9 @@ var databaseURI = '';
   mongoose.connect(databaseURI);
 
 /*'mongodb://bhher:higginsher8082@ds035735.mlab.com:35735/heroku_2sw0ct69'*/
+=======
+var databaseURI = 'mongodb://localhost:27017/fuxia';
+>>>>>>> 95a4aef38f0da321d70d3306e831b35ce8fb8234
 
 mongoose.connect(databaseURI);
 

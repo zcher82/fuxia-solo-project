@@ -33,7 +33,6 @@ var databaseURI = '';
   } else {
     databaseURI = 'mongodb://localhost:27017/fuxia';
   }
-  mongoose.connect(databaseURI);
 
 /*'mongodb://bhher:higginsher8082@ds035735.mlab.com:35735/heroku_2sw0ct69'*/
 

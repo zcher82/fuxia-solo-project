@@ -44,7 +44,7 @@
 }
 
 .inputHtml, .galleryHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
-  .colorHtml, .accountsHtml {
+ .colorHtml, .accountsHtml {
   padding: 120px 0 80px 0;
 }
 
@@ -310,11 +310,12 @@ footer {
 }
 
 /* ************************ COLOR MEANINGS PAGE ****************/
-.colorHtml h1 {
+/*.colorHtml h1 {
   text-align: center;
-}
+}*/
 
 /*--------------------------------- SLIDER -------------------------------------------*/
+
 .arrow {
     cursor: pointer;
     display: block;
@@ -327,13 +328,11 @@ footer {
     z-index: 5;
 }
 .arrow.prev {
-    background-image: url("../images/prev.png");
     left: 20px;
     opacity: 0.2;
     transition: all 0.2s linear 0s;
 }
 .arrow.next {
-    background-image: url("../images/next.png");
     opacity: 0.2;
     right: 20px;
     transition: all 0.2s linear 0s;
@@ -375,13 +374,22 @@ footer {
     width: 100%;
 }
 
-.slider {
+/*.slider {
     border: 15px solid #FFFFFF;
     border-radius: 5px;
     height: 530px;
     margin: 20px auto;
     position: relative;
-    width: 745px;
+    width: 745px;*/
+
+.slider {
+    border: 15px solid #FFFFFF;
+    border-radius: 5px;
+    height: 560px;
+    margin: 94.5px;
+    position: relative;
+    width: 775px;
+    padding: 0px;
 
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
